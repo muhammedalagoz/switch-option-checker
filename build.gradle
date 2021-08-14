@@ -1,17 +1,18 @@
 plugins {
-    id 'java'
+    id 'java-library'
     id 'maven-publish'
 }
 
 group 'com.switchoptionchecker'
 version '1.0.0'
+sourceCompatibility = '11'
 
 publishing {
     publications {
-        maven(MavenPublication) {
-            groupId = 'com.switchoptionchecker' as Publication
-            artifactId = 'switch-option-checker' as Publication
-            version = '1.0.0' as Publication
+        mavenJava(MavenPublication) {
+            groupId = "com.switchoptionchecker"
+            artifactId = "switch-option-checker"
+            version = "1.0.0"
 
             from components.java
         }
