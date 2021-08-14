@@ -3,7 +3,6 @@ package com.switchoptionchecker;
 import com.switchoptionchecker.function.CheckFunction;
 import com.switchoptionchecker.function.PredicateCheck;
 import com.switchoptionchecker.result.ResultFunction;
-import com.switchoptionchecker.result.RunnableResult;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
