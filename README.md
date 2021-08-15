@@ -2,6 +2,69 @@
 
 This library is made to collect multiple if options in a map and determine the appropriate return format for each case.
 
+## How to Implement
+
+To get a Git project into your build:
+###Gradle
+```groovy
+//Step 1. Add the JitPack repository to your build file
+//Add it in your root build.gradle at the end of repositories:
+allprojects {
+  repositories {
+    ...
+    maven { url 'https://jitpack.io' }
+  }
+}
+
+//Step 2. Add the dependency
+dependencies {
+  implementation 'com.github.muhammedalagoz:switch-option-checker:Tag'
+}
+```
+
+###Maven
+```xml
+//Step 1. Add the JitPack repository to your build file
+<repositories>
+  <repository>
+    <id>jitpack.io</id>
+    <url>https://jitpack.io</url>
+  </repository>
+</repositories>
+
+//Step 2. Add the dependency
+<dependency>
+  <groupId>com.github.muhammedalagoz</groupId>
+  <artifactId>switch-option-checker</artifactId>
+  <version>Tag</version>
+</dependency>
+```
+###sbt
+```groovy
+//Step 1. Add the JitPack repository to your build file
+//Add it in your build.sbt at the end of resolvers:
+
+resolvers += "jitpack" at "https://jitpack.io"
+
+
+//Step 2. Add the dependency
+libraryDependencies += "com.github.muhammedalagoz" % "switch-option-checker" % "Tag"
+
+```
+###leiningen
+```groovy
+//Step 1. Add the JitPack repository to your build file
+//Add it in your project.clj at the end of repositories:
+
+:repositories [["jitpack" "https://jitpack.io"]]
+
+
+//Step 2. Add the dependency
+:dependencies [[com.github.muhammedalagoz/switch-option-checker "Tag"]]
+
+```
+
+
 ## Example
 
 ```java

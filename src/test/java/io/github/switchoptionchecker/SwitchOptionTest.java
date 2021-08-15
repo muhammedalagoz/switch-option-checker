@@ -2,6 +2,7 @@ package io.github.switchoptionchecker;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.Optional;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
@@ -19,7 +20,7 @@ class SwitchOptionTest {
         final Supplier<String> supplierName = () -> "muhammed";
         final Supplier<String> supplierSurname = () -> "alagoz";
 
-        final var supplierNameValue = SwitchOption.<User, String>of()
+        final Optional<String> supplierNameValue = SwitchOption.<User, String>of()
                 .match(user -> user.getName().equals("muhammed"))
                 .then(supplierName)
 
@@ -37,7 +38,7 @@ class SwitchOptionTest {
         final Supplier<String> supplierName = () -> "muhammed";
         final Supplier<String> supplierSurname = () -> "alagoz";
 
-        final var supplierSurnameValue = SwitchOption.<User, String>of()
+        final Optional<String> supplierSurnameValue = SwitchOption.<User, String>of()
                 .match(user -> user.getSurname().equals("muhammed"))
                 .then(supplierName)
 
@@ -55,7 +56,7 @@ class SwitchOptionTest {
         final Supplier<String> supplierName = () -> "muhammed";
         final Supplier<String> supplierSurname = () -> "alagoz";
 
-        final var supplierSurnameValue = SwitchOption.<User, String>of()
+        final Optional<String> supplierSurnameValue = SwitchOption.<User, String>of()
                 .match(user.getSurname().equals("muhammed"))
                 .then(supplierName)
 
@@ -70,10 +71,10 @@ class SwitchOptionTest {
 
     @Test
     void shouldMatchCaseReturnThenReferenceResult() {
-        final var company = new Company("ALAGOZ LTD");
-        final var company2 = new Company("ALI LTD");
+        final Company company = new Company("ALAGOZ LTD");
+        final Company company2 = new Company("ALI LTD");
 
-        final var optionalCompany = SwitchOption.<User, Company>of()
+        final Optional<Company> optionalCompany = SwitchOption.<User, Company>of()
                 .match(user -> user.getName().equals("muhammed"))
                 .then(company)
 
@@ -91,7 +92,7 @@ class SwitchOptionTest {
         final Function<User, String> userFullName = user -> user.getName() + " " + user.getSurname();
         final Function<User, String> userFullNameAndAge = user -> user.getName() + " " + user.getSurname() + " " + user.getAge();
 
-        final var optionalCompany = SwitchOption.<User, String>of()
+        final Optional<String> optionalFullname = SwitchOption.<User, String>of()
                 .match(user -> user.getName().equals("ali"))
                 .then(userFullNameAndAge)
 
@@ -100,8 +101,8 @@ class SwitchOptionTest {
 
                 .get(user);
 
-        assertTrue(optionalCompany.isPresent());
-        assertEquals(optionalCompany.get(), "muhammed alagoz");
+        assertTrue(optionalFullname.isPresent());
+        assertEquals(optionalFullname.get(), "muhammed alagoz");
     }
 }
 
