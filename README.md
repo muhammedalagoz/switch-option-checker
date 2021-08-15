@@ -1,6 +1,7 @@
 # Switch-Option-Checker
 
-This library is made to collect multiple if options in a map and determine the appropriate return format for each case.
+This library is made to collect multiple if options in a hashmap, 
+It determines the appropriate return format for each case.
 
 ## How to Implement
 
