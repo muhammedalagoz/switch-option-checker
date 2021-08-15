@@ -1,4 +1,4 @@
-package com.switchoptionchecker.result;
+package io.github.switchoptionchecker.result;
 
 import java.util.Optional;
 

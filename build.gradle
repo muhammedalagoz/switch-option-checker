@@ -3,18 +3,29 @@ plugins {
     id 'maven-publish'
 }
 
-group 'com.switchoptionchecker'
+group 'io.github.switchoptionchecker'
 version '1.0.0'
 sourceCompatibility = '11'
 
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier = 'sources'
+    from sourceSets.main.java.srcDirs
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
 publishing {
     publications {
-        mavenJava(MavenPublication) {
-            groupId = "com.switchoptionchecker"
-            artifactId = "switch-option-checker"
-            version = "1.0.0"
-
+        autorest(MavenPublication) {
             from components.java
+            artifact sourcesJar
+            artifact javadocJar
+            groupId 'io.github.switchoptionchecker'
+            artifactId 'switch-option-checker'
+            version '1.0.0'
         }
     }
 }

@@ -1,8 +1,8 @@
-package com.switchoptionchecker;
+package io.github.switchoptionchecker;
 
-import com.switchoptionchecker.function.CheckFunction;
-import com.switchoptionchecker.function.PredicateCheck;
-import com.switchoptionchecker.result.ResultFunction;
+import io.github.switchoptionchecker.function.CheckFunction;
+import io.github.switchoptionchecker.function.PredicateCheck;
+import io.github.switchoptionchecker.result.ResultFunction;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

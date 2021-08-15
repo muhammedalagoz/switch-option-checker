@@ -1,4 +1,4 @@
-package com.switchoptionchecker.function;
+package io.github.switchoptionchecker.function;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

@@ -1,4 +1,4 @@
-package com.switchoptionchecker;
+package io.github.switchoptionchecker;
 
 import org.junit.jupiter.api.Test;
 

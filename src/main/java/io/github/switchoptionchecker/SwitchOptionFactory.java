@@ -1,7 +1,7 @@
-package com.switchoptionchecker;
+package io.github.switchoptionchecker;
 
-import com.switchoptionchecker.function.CheckFunction;
-import com.switchoptionchecker.result.*;
+import io.github.switchoptionchecker.function.CheckFunction;
+import io.github.switchoptionchecker.result.*;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
