@@ -5,7 +5,8 @@ This library is made to collect multiple if options in a map and determine the a
 ## How to Implement
 
 To get a Git project into your build:
-###Gradle
+
+### Gradle
 ```groovy
 //Step 1. Add the JitPack repository to your build file
 //Add it in your root build.gradle at the end of repositories:
@@ -22,7 +23,7 @@ dependencies {
 }
 ```
 
-###Maven
+### Maven
 ```xml
 //Step 1. Add the JitPack repository to your build file
 <repositories>
@@ -39,7 +40,7 @@ dependencies {
   <version>Tag</version>
 </dependency>
 ```
-###sbt
+### sbt
 ```groovy
 //Step 1. Add the JitPack repository to your build file
 //Add it in your build.sbt at the end of resolvers:
@@ -51,7 +52,7 @@ resolvers += "jitpack" at "https://jitpack.io"
 libraryDependencies += "com.github.muhammedalagoz" % "switch-option-checker" % "Tag"
 
 ```
-###leiningen
+### leiningen
 ```groovy
 //Step 1. Add the JitPack repository to your build file
 //Add it in your project.clj at the end of repositories:
@@ -63,7 +64,6 @@ libraryDependencies += "com.github.muhammedalagoz" % "switch-option-checker" % "
 :dependencies [[com.github.muhammedalagoz/switch-option-checker "Tag"]]
 
 ```
-
 
 ## Example
 
